@@ -1,0 +1,29 @@
+<div class="conatiner">
+
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>Name</th>
+            <th>Units</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr style="padding-top:20px;" *ngFor="let product of products"> 
+            <td>{{product._id}}</td> 
+            <td>{{product.Name}}</td>  
+            <td>{{product.Units}}</td>  
+            <td>{{product.Description}}</td>
+            <td>{{product.Price}}</td>
+
+            <td><button [routerLink]="['/edit',product._id]">Edit</button>  <button (click)="deleteItem(product._id)">Delete</button></td> 
+            
+            </tr>
+    </table>
+    <br>
+    <br>
+    <button [routerLink]="['/add']">
+        Add an Item
+    </button>
+        </div>
