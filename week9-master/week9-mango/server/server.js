@@ -26,3 +26,5 @@ MongoClient.connect(url, {poolSize:10,useNewUrlParser: true,useUnifiedTopology: 
         require('./listen.js')(http);
 
 });
+
+module.exports = app;
